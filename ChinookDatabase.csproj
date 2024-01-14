@@ -1,0 +1,347 @@
+  1 <?xml version="1.0" encoding="utf-8"?>
+  2 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microso>
+  3   <PropertyGroup>
+  4     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+  5     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+  6     <ProductVersion>9.0.30729</ProductVersion>
+  7     <SchemaVersion>2.0</SchemaVersion>
+  8     <ProjectGuid>{AC2D0974-9B63-429A-BB62-031B716C8861}</ProjectGuid>
+  9     <OutputType>Library</OutputType>
+ 10     <AppDesignerFolder>Properties</AppDesignerFolder>
+ 11     <RootNamespace>ChinookDatabase</RootNamespace>
+ 12     <AssemblyName>ChinookDatabase</AssemblyName>
+ 13     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+ 14     <FileAlignment>512</FileAlignment>
+ 15     <IsWebBootstrapper>true</IsWebBootstrapper>
+ 16     <FileUpgradeFlags>
+ 17     </FileUpgradeFlags>
+ 18     <OldToolsVersion>3.5</OldToolsVersion>
+ 19     <UpgradeBackupLocation />
+ 20     <TargetFrameworkProfile />
+ 21     <PublishUrl>http://localhost/ChinookDatabase/</PublishUrl>
+ 22     <Install>true</Install>
+ 23     <InstallFrom>Web</InstallFrom>
+ 24     <UpdateEnabled>true</UpdateEnabled>
+ 25     <UpdateMode>Foreground</UpdateMode>
+ 26     <UpdateInterval>7</UpdateInterval>
+ 27     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+ 28     <UpdatePeriodically>false</UpdatePeriodically>
+ 29     <UpdateRequired>false</UpdateRequired>
+ 30     <MapFileExtensions>true</MapFileExtensions>
+ 31     <ApplicationRevision>0</ApplicationRevision>
+ 32     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+ 33     <UseApplicationTrust>false</UseApplicationTrust>
+ 34     <BootstrapperEnabled>true</BootstrapperEnabled>
+ 35     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefine>
+ 36     <RestorePackages>true</RestorePackages>
+ 37   </PropertyGroup>
+ 38   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+ 39     <DebugSymbols>true</DebugSymbols>
+ 40     <DebugType>full</DebugType>
+ 41     <Optimize>false</Optimize>
+ 42     <OutputPath>bin\Debug\</OutputPath>
+ 43     <DefineConstants>DEBUG;TRACE</DefineConstants>
+ 44     <ErrorReport>prompt</ErrorReport>
+ 45     <WarningLevel>4</WarningLevel>
+ 46     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+ 47     <PlatformTarget>AnyCPU</PlatformTarget>
+ 48     <Prefer32Bit>false</Prefer32Bit>
+ 49     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+ 50   </PropertyGroup>
+ 51   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU'
+    <DebugType>pdbonly</DebugType>
+ 53     <Optimize>true</Optimize>
+ 54     <OutputPath>bin\Release\</OutputPath>
+ 55     <DefineConstants>TRACE</DefineConstants>
+ 56     <ErrorReport>prompt</ErrorReport>
+ 57     <WarningLevel>4</WarningLevel>
+ 58     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+ 59     <Prefer32Bit>false</Prefer32Bit>
+ 60   </PropertyGroup>
+ 61   <ItemGroup>
+ 62     <Reference Include="EntityFramework">
+ 63       <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll<>
+ 64     </Reference>
+ 65     <Reference Include="Microsoft.Data.Entity.Design.DatabaseGeneration">
+ 66       <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\>
+ 67     </Reference>
+ 68     <Reference Include="System" />
+ 69     <Reference Include="System.ComponentModel.DataAnnotations" />
+ 70     <Reference Include="System.configuration" />
+ 71     <Reference Include="System.Core">
+ 72       <RequiredTargetFramework>3.5</RequiredTargetFramework>
+ 73     </Reference>
+ 74     <Reference Include="System.Data.Entity" />
+ 75     <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutra>
+ 76       <Private>True</Private>
+ 77       <HintPath>..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\lib\net40\Sys>
+ 78     </Reference>
+ 79     <Reference Include="System.Runtime.Serialization" />
+ 80     <Reference Include="System.Security" />
+ 81     <Reference Include="System.Xml.Linq">
+ 82       <RequiredTargetFramework>3.5</RequiredTargetFramework>
+ 83     </Reference>
+ 84     <Reference Include="System.Data.DataSetExtensions">
+ 85       <RequiredTargetFramework>3.5</RequiredTargetFramework>
+ 86     </Reference>
+ 87     <Reference Include="System.Data" />
+ 88     <Reference Include="System.Xml" />
+ 89   </ItemGroup>
+ 90   <ItemGroup>
+ 91     <Compile Include="Chinook.Designer.cs">
+ 92       <AutoGen>True</AutoGen>
+ 93       <DesignTime>True</DesignTime>
+ 94       <DependentUpon>Chinook.edmx</DependentUpon>
+ 95     </Compile>
+ 96     <Compile Include="DataModel\Album.cs" />
+ 97     <Compile Include="DataModel\Artist.cs" />
+ 98     <Compile Include="DataModel\ChinookModel.cs" />
+   <Compile Include="DataModel\Customer.cs" />
+100     <Compile Include="DataModel\Employee.cs" />
+101     <Compile Include="DataModel\Genre.cs" />
+102     <Compile Include="DataModel\Invoice.cs" />
+103     <Compile Include="DataModel\InvoiceLine.cs" />
+104     <Compile Include="DataModel\MediaType.cs" />
+105     <Compile Include="DataModel\Playlist.cs" />
+106     <Compile Include="DataModel\PlaylistTrack.cs" />
+107     <Compile Include="DataModel\Track.cs" />
+108     <Compile Include="DataSources\_Xml\Schema\ChinookDataSet.cs">
+109       <DependentUpon>ChinookDataSet.xsd</DependentUpon>
+110       <SubType>Component</SubType>
+111     </Compile>
+112     <Compile Include="DataSources\_Xml\Schema\ChinookDataSet.Designer.cs">
+113       <AutoGen>True</AutoGen>
+114       <DesignTime>True</DesignTime>
+115       <DependentUpon>ChinookDataSet.xsd</DependentUpon>
+116     </Compile>
+117     <Compile Include="DdlStrategies\AbstractDdlStrategy.cs" />
+118     <Compile Include="DdlStrategies\Db2Strategy.cs" />
+119     <Compile Include="DdlStrategies\EffiProzStrategy.cs" />
+120     <Compile Include="DdlStrategies\OracleStrategy.cs" />
+121     <Compile Include="DdlStrategies\KeyDefinition.cs" />
+122     <Compile Include="DdlStrategies\PostgreSqlStrategy.cs" />
+123     <Compile Include="DdlStrategies\SqliteStrategy.cs" />
+124     <Compile Include="DdlStrategies\SqlServerCompactStrategy.cs" />
+125     <Compile Include="Properties\AssemblyInfo.cs" />
+126     <Compile Include="Utilities\DataSetHelper.cs" />
+127     <Compile Include="DdlStrategies\IDdlStrategy.cs" />
+128     <Compile Include="Utilities\EdmHelper.cs" />
+129     <Compile Include="Utilities\ITunesToChinookDataSetConverter.cs" />
+130     <Compile Include="DdlStrategies\MySqlStrategy.cs" />
+131     <Compile Include="DdlStrategies\SqlServerStrategy.cs" />
+132     <Compile Include="Utilities\TrackInfo.cs" />
+133   </ItemGroup>
+134   <ItemGroup>
+135     <EntityDeploy Include="Chinook.edmx">
+136       <Generator>EntityModelCodeGenerator</Generator>
+137       <LastGenOutput>Chinook.Designer.cs</LastGenOutput>
+138     </EntityDeploy>
+139     <None Include="App.Config">
+140       <SubType>Designer</SubType>
+141     </None>
+142     <None Include="DataSources\ChinookDatabase.tt">
+143       <Generator>TextTemplatingFileGenerator</Generator>
+144       <LastGenOutput>ChinookDatabase.txt</LastGenOutput>
+145     </None>
+146     <Content Include="DataSources\ChinookDatabase.txt">
+147       <AutoGen>True</AutoGen>
+ <DesignTime>True</DesignTime>
+149       <DependentUpon>ChinookDatabase.tt</DependentUpon>
+150     </Content>
+151     <Content Include="DataSources\Chinook_Db2.sql">
+152       <DependentUpon>ChinookDatabase.tt</DependentUpon>
+153     </Content>
+154     <Content Include="DataSources\Chinook_EffiProz_AutoIncrementPKs.sql">
+155       <DependentUpon>ChinookDatabase.tt</DependentUpon>
+156       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+157     </Content>
+158     <Content Include="DataSources\Chinook_MySql_AutoIncrementPKs.sql">
+159       <DependentUpon>ChinookDatabase.tt</DependentUpon>
+160       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+161     </Content>
+162     <Content Include="DataSources\Chinook_PostgreSql.sql">
+163       <DependentUpon>ChinookDatabase.tt</DependentUpon>
+164     </Content>
+165     <Content Include="DataSources\Chinook_Sqlite.sqlite">
+166       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+167     </Content>
+168     <Content Include="DataSources\Chinook_Sqlite_AutoIncrementPKs.sql">
+169       <DependentUpon>ChinookDatabase.tt</DependentUpon>
+170     </Content>
+171     <Content Include="DataSources\Chinook_SqlServerCompact.sqlce">
+172       <DependentUpon>ChinookDatabase.tt</DependentUpon>
+173       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+174     </Content>
+175     <Content Include="DataSources\Chinook_SqlServerCompact_AutoIncrementPKs.sqlc>
+176       <DependentUpon>ChinookDatabase.tt</DependentUpon>
+177       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+178     </Content>
+179     <Content Include="DataSources\CreateMySql.bat">
+180       <DependentUpon>ChinookDatabase.tt</DependentUpon>
+181       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+182     </Content>
+183     <Content Include="DataSources\CreateOracle.bat">
+184       <DependentUpon>ChinookDatabase.tt</DependentUpon>
+185       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+186     </Content>
+187     <Content Include="DataSources\CreateSqlite.bat">
+188       <DependentUpon>ChinookDatabase.tt</DependentUpon>
+189       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+190     </Content>
+191     <Content Include="DataSources\CreateSqlServer.bat">
+192       <DependentUpon>ChinookDatabase.tt</DependentUpon>
+193       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+194     </Content>
+195     <Content Include="DataSources\Chinook_Sqlite_AutoIncrementPKs.sqlite">
+196       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+197     </Content>
+198     <None Include="DataSources\CreateAll.bat" />
+ <None Include="DataSources\CreateDb2.bat">
+200       <DependentUpon>ChinookDatabase.tt</DependentUpon>
+201     </None>
+202     <None Include="DataSources\CreatePostgreSql.bat">
+203       <DependentUpon>ChinookDatabase.tt</DependentUpon>
+204     </None>
+205     <None Include="DataSources\Package.bat">
+206       <DependentUpon>ChinookDatabase.tt</DependentUpon>
+207       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+208     </None>
+209     <None Include="DataSources\_Xml\ChinookData.tt">
+210       <Generator>TextTemplatingFileGenerator</Generator>
+211       <LastGenOutput>ChinookData.xml</LastGenOutput>
+212     </None>
+213     <None Include="DataSources\_Xml\Schema\ChinookDataSet.xsc">
+214       <DependentUpon>ChinookDataSet.xsd</DependentUpon>
+215     </None>
+216     <None Include="DataSources\_Xml\Schema\ChinookDataSet.xsd">
+217       <Generator>MSDataSetGenerator</Generator>
+218       <LastGenOutput>ChinookDataSet.Designer.cs</LastGenOutput>
+219       <SubType>Designer</SubType>
+220     </None>
+221     <None Include="DataSources\_Xml\Schema\ChinookDataSet.xss">
+222       <DependentUpon>ChinookDataSet.xsd</DependentUpon>
+223     </None>
+224     <None Include="packages.config" />
+225     <None Include="_T4Templates\Chinook.ttinclude">
+226       <AutoGen>True</AutoGen>
+227       <DesignTime>True</DesignTime>
+228       <DependentUpon>Chinook.tt</DependentUpon>
+229     </None>
+230     <None Include="_T4Templates\Chinook.tt">
+231       <Generator>TextTemplatingFileGenerator</Generator>
+232       <LastGenOutput>Chinook.ttinclude</LastGenOutput>
+233     </None>
+234     <None Include="_T4Templates\Manager.ttinclude" />
+235   </ItemGroup>
+236   <ItemGroup>
+237     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+238     <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+239   </ItemGroup>
+240   <ItemGroup>
+241     <Content Include="DataSources\Chinook_EffiProz.sql">
+242       <DependentUpon>ChinookDatabase.tt</DependentUpon>
+243       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+244     </Content>
+245     <Content Include="DataSources\Chinook_MySql.sql">
+246       <DependentUpon>ChinookDatabase.tt</DependentUpon>
+247       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+   </Content>
+249     <Content Include="DataSources\Chinook_Oracle.sql">
+250       <DependentUpon>ChinookDatabase.tt</DependentUpon>
+251       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+252     </Content>
+253     <Content Include="DataSources\Chinook_Sqlite.sql">
+254       <DependentUpon>ChinookDatabase.tt</DependentUpon>
+255       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+256     </Content>
+257     <Content Include="DataSources\Chinook_SqlServer.sql">
+258       <DependentUpon>ChinookDatabase.tt</DependentUpon>
+259       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+260     </Content>
+261     <Content Include="DataSources\Chinook_SqlServerCompact.sdf">
+262       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+263     </Content>
+264     <Content Include="DataSources\Chinook_SqlServerCompact_AutoIncrementPKs.sdf">
+265       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+266     </Content>
+267     <Content Include="DataSources\Chinook_SqlServer_AutoIncrementPKs.sql">
+268       <DependentUpon>ChinookDatabase.tt</DependentUpon>
+269       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+270     </Content>
+271     <Content Include="DataSources\_Xml\ChinookData.xml">
+272       <AutoGen>True</AutoGen>
+273       <DesignTime>True</DesignTime>
+274       <DependentUpon>ChinookData.tt</DependentUpon>
+275       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+276       <SubType>Designer</SubType>
+277     </Content>
+278     <Content Include="DataSources\_Xml\Source\CompanyData.xml" />
+279     <Content Include="DataSources\_Xml\Source\iTunes Music Library.xml" />
+280   </ItemGroup>
+281   <ItemGroup>
+282     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+283       <Visible>False</Visible>
+284       <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+285       <Install>false</Install>
+286     </BootstrapperPackage>
+287     <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+288       <Visible>False</Visible>
+289       <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+290       <Install>false</Install>
+291     </BootstrapperPackage>
+292     <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+293       <Visible>False</Visible>
+294       <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+295       <Install>false</Install>
+296     </BootstrapperPackage>
+297     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+298       <Visible>False</Visible>
+299       <ProductName>.NET Framework 3.5</ProductName>
+300       <Install>false</Install>
+301     </BootstrapperPackage>
+302     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+303       <Visible>False</Visible>
+304       <ProductName>.NET Framework 3.5 SP1</ProductName>
+305       <Install>true</Install>
+306     </BootstrapperPackage>
+307     <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.3.5">
+308       <Visible>False</Visible>
+309       <ProductName>SQL Server Compact 3.5 SP2</ProductName>
+310       <Install>true</Install>
+311     </BootstrapperPackage>
+312     <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+313       <Visible>False</Visible>
+314       <ProductName>Windows Installer 3.1</ProductName>
+315       <Install>true</Install>
+316     </BootstrapperPackage>
+317   </ItemGroup>
+318   <ItemGroup />
+319   <Project Sdk="Microsoft.NET.Sdk">
+320
+321 <Project Sdk="Microsoft.NET.Sdk">
+322
+323   <PropertyGroup>
+324     <OutputType>Exe</OutputType>
+325     <TargetFramework>net6.0</TargetFramework>
+326   </PropertyGroup>
+327
+328   <ItemGroup>
+329     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.>
+330     </ItemGroup>
+331
+332 </Project>
+333
+334
+335   <PropertyGroup>
+336     <PostBuildEvent>@echo off
+337 rem cd DataSources
+338 rem CreateAll.bat
+339 rem cd ..
+340
+341     if not exist "$(TargetDir)x86" md "$(TargetDir)x86"
+rem    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.>
+343     if not exist "$(TargetDir)amd64" md "$(TargetDir)amd64"
+344 rem    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.>
+345   </PropertyGroup>
+346   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+347 </Project>
